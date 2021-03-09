@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\ImoveisController;
+
+Route::get('/', [ImoveisController::class, 'index']);
+Route::get('/imoveis/create', [ImoveisController::class, 'create']);
 
 Route::get('/', function () {
     return view('welcome');
